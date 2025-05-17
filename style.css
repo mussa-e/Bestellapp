@@ -1,9 +1,13 @@
-body {
+html body {
     margin: 0;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header {
-    background-color: #ff7c00;
+    background-color: chocolate;
     height: 80px;
     display: flex;
     align-items: center;
@@ -14,7 +18,7 @@ header {
 
 header img {
     height: 48px;
-    width: 96px;
+    width: 104px;
 }
 
 
@@ -49,6 +53,56 @@ header img {
     font-size: 24px;
 }
 .rate {
-    color: #ff7c00;
+    color: chocolate;
     font-size: 18px;
+}
+
+.navbar {
+    padding: 0 40px 0 40px;
+    align-items: center;
+    height: 48px;
+    display: flex;
+    background-color: #80808017;
+    gap: 24px;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 24px;
+}
+.navbar img {
+    height: 24px;
+    width: 24px;
+}
+
+.mid-pic-sec {
+    height: 180px;
+    padding: 16px 40px 16px 40px;
+}
+.mid-pic-sec img {
+    height: 180px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+main {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    gap: 24px;
+    padding: 24px 40px 24px 40px;
+}
+
+.bottom-pic-sec {
+    height: 120px;
+    padding: 16px 40px 16px 40px;
+}
+.bottom-pic-sec img {
+    height: 120px;
+    width: 100vw;
+    object-fit: cover;
+}
+
+footer {
+    height: 80px;
+    background-color: chocolate;
+    
 }

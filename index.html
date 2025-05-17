@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestellapp</title>
 
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="fonts.css">
+   
+    <link rel="icon" type="image/png" href="assets/Favicon/favicon-16x16.png">
+
+    <script src="script.js"></script>
 
 </head>
-<body>
+
+<body onload="renderMainDish()">
 
     <header>
         <a href="index.html"><img href="index.html" src="assets/Logo/Logo.png" alt="Logo"></a>
@@ -29,7 +37,31 @@
         <p class="rate">Bewertung (4,5 von 5 Sternen)</p>
     </div>
 
+    <div class="navbar">
+        <img src="assets/img/arrow.png" alt="">
+        <p onclick="renderMainDish()">Hauptgerichte</p>
+        <p onclick="renderSides()">Beilagen</p>
+        <p onclick="renderDrinks()">Drinks</p>
+    </div>
+
+    <div class="mid-pic-sec">
+        <img src="assets/img/veg.jpg" alt="">
+    </div>
     
+    <main class="main" id="main">
+        <!--  -->
+    </main>
+
+    <div class="bottom-pic-sec">
+        <a href="index.html"><img src="assets/img/chicken.jpg"></a>
+    </div>
+
+    <footer>
+
+    </footer>
     
+
+
+
 </body>
 </html>
