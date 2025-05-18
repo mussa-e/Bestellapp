@@ -39,7 +39,7 @@ header img {
 }
 
 .head-pic-sec img {
-    width: 100vw;
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -54,7 +54,7 @@ header img {
 }
 .rate {
     color: chocolate;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .navbar {
@@ -79,7 +79,7 @@ header img {
 }
 .mid-pic-sec img {
     height: 180px;
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -97,7 +97,7 @@ main {
 }
 .bottom-pic-sec img {
     height: 120px;
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -105,4 +105,51 @@ footer {
     height: 80px;
     background-color: chocolate;
     
+}
+
+.food-temp-headline {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px;
+}
+.food-temp{
+    padding: 12px;
+    border: solid 0.5px #e0dada;
+    flex-direction: column;
+    display: flex;
+    gap: 8px;
+}
+.food-temp-head {
+    display: flex;
+    justify-content: space-between;
+}
+.food-temp-name {
+    font-weight: bold;
+}
+.food-temp-price {
+    color: chocolate;
+    font-weight: bold;
+}
+
+.content-wrapper{
+    gap: 2px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.content {
+    width: calc(100% - 280px);
+}
+.basket-wrapper {
+    width: 280px;
+    flex-grow: 1;
+    border: 2px solid hsla(39, 100%, 68%, 1);
+    padding: 16px;
+}
+.basket {
+    width: 100%;
+    height: 400px;
+    position: sticky;
+    top: 0;
+    background-color: aqua;
 }
