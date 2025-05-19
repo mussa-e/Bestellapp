@@ -1,4 +1,8 @@
-
+function init(){
+    renderMainDish();
+    renderSubtotal();
+    renderTotal();
+}
 
 function renderMainDish(){
     let contentRef = document.getElementById("main");
@@ -26,16 +30,25 @@ function getFoodTemplate(indexMain){
 
 
 
-function addToBasket(indexMain){
+function addToBasket(indexMain) {
     let addName = food[indexMain].name;
     let addPrice = food[indexMain].price;
 
-    basket.push({
-                    "name" : addName,
-                    "price" : addPrice
-    })
+    let existingIndex = basket.findIndex(item => item.name === addName);
+
+    if (existingIndex !== -1) {
+        basket[existingIndex].amount++;
+    } else {
+        basket.push({
+            "name": addName,
+            "price": addPrice,
+            "amount": 1
+        });
+    }
 
     renderBasket();
+    renderSubtotal();
+    renderTotal();
 }
 
 
@@ -50,6 +63,9 @@ function renderBasket(){
 
 
 function getBasketTemplate(indexBasket){
+
+    let totalPrice = (basket[indexBasket].price * basket[indexBasket].amount).toFixed(2).replace(".", ",");
+
     return `
             
             <div class="inner-basket-temp-wrapper">
@@ -57,15 +73,15 @@ function getBasketTemplate(indexBasket){
 
                     <div class="inner-basket-temp">
 
-                        <i onclick="countDown()"  class="fa-solid fa-minus"></i>
+                        <i onclick="subtractAmount(${indexBasket})"  class="fa-solid fa-minus"></i>
 
-                        <p>${basket[indexBasket].price.toFixed(2).replace("." ,",")}€</p>
+                        <p>${basket[indexBasket].amount} x</p>
 
-                        <i onclick="countUp()" class="fa-solid fa-plus"></i>
+                        <i onclick="addAmount(${indexBasket})" class="fa-solid fa-plus"></i>
 
-                        <p></p>
+                        <p id="basket-total-${indexBasket}">${totalPrice}€</p>
 
-                        <i onclick="delete()" class="fa-solid fa-trash-can"></i>
+                        <i onclick="deleteItem(${indexBasket})" class="fa-solid fa-trash-can"></i>
 
                     </div>
 
@@ -74,15 +90,59 @@ function getBasketTemplate(indexBasket){
 }
 
 
+function addAmount(indexBasket) {
+    basket[indexBasket].amount++;
+    renderBasket();
+    renderSubtotal();
+    renderTotal();
+}
+
+
+function subtractAmount(indexBasket) {
+    if (basket[indexBasket].amount > 1) {
+        basket[indexBasket].amount--;
+    } else {
+        basket.splice(indexBasket, 1);
+    }
+    renderBasket();
+    renderSubtotal();
+    renderTotal();
+}
+
+
+function deleteItem(indexBasket) {
+    basket.splice(indexBasket, 1);
+    renderBasket();
+    renderSubtotal();
+    renderTotal();
+}
 
 
 
+function renderSubtotal() { 
+    let subtotalRef = document.getElementById("subtotal");
+    let subtotal = 0;
+
+    for (let indexSubtotal = 0; indexSubtotal < basket.length; indexSubtotal++) {
+        subtotal += basket[indexSubtotal].price * basket[indexSubtotal].amount;
+    }
+
+    subtotalRef.innerHTML = `${subtotal.toFixed(2).replace(".", ",")}€`;
+}
 
 
-// function renderSides(){
+function renderTotal() {
+    let totalRef = document.getElementById("total");
+    let subtotalRef = document.getElementById("subtotal");
+    let delRef = document.getElementById("delivery");
 
-// }
+    let subtotalText = subtotalRef.innerText.replace("€", "").replace(",", ".");
+    let deliveryText = delRef.innerText.replace("€", "").replace(",", ".");
 
-// function renderDrinks(){
+    let subtotal = parseFloat(subtotalText); 
+    let delivery = parseFloat(deliveryText); //parseFloat wandelt string in number um (hier "4.00" zu 4.00)
 
-// }
+    let total = subtotal + delivery;
+
+    totalRef.innerHTML = `${total.toFixed(2).replace(".", ",")}€`;
+}

@@ -45,6 +45,18 @@
     padding: 0 16px 0 16px;
     border-top: 0.5px solid #e0dada;
 }
-.gesamtkosten p {
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+}
+.delivery {
+    display: flex;
+    justify-content: space-between;
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+.total p {
     font-weight: bold;
 }

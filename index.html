@@ -19,7 +19,7 @@
 
 </head>
 
-<body onload="renderMainDish()">
+<body onload="init()">
 
     <header>
         <a href="index.html"><img href="index.html" src="assets/Logo/Logo.png" alt="Logo"></a>
@@ -78,9 +78,9 @@
             </div>
 
             <div class="basket-bottom">
-            <div><p>Zwischensumme</p> <p></p> </div>
-            <div><p>Lieferkosten</p> <p></p> </div>
-            <div class="gesamtkosten"><p>Gesamt</p> <p></p> </div>
+            <div class="subtotal"><p>Zwischensumme</p> <p id="subtotal"></p> </div>
+            <div class="delivery"><p>Lieferkosten</p> <p id="delivery">4,00€</p> </div>
+            <div class="total"><p>Gesamt</p> <p id="total"></p> </div>
             </div>
         </div>
     </div>
