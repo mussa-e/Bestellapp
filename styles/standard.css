@@ -11,3 +11,7 @@
 .button-plus i {
     color: chocolate;
 }
+
+.d-none {
+    display: none;
+}

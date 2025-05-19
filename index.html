@@ -16,6 +16,7 @@
 
     <script src="scripts/db.js"></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/template.js"></script>
 
 </head>
 
@@ -41,7 +42,7 @@
     </div>
 
     <div class="imbiss-name-sec">
-        <p class="imbiss-name">Do it your taste!</p>
+        <p class="imbiss-name">Plated!</p>
         <p class="rate">Bewertung (4,5 von 5 Sternen)</p>
     </div>
 
@@ -73,9 +74,17 @@
                 <h1>Warenkorb</h1>
             </div>
 
+
+                <div class="inner-basket-empty d-none" id="empty-info">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <p>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</p>
+                </div>
+
+
             <div class="inner-basket" id="inner-basket">
                 <!--  -->
             </div>
+
 
             <div class="basket-bottom">
             <div class="subtotal"><p>Zwischensumme</p> <p id="subtotal"></p> </div>

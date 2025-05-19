@@ -1,4 +1,4 @@
-html body {
+html, body {
     margin: 0;
     font-family: "Raleway", sans-serif;
     display: flex;
@@ -135,7 +135,6 @@ footer {
 }
 
 .content-wrapper{
-    gap: 2px;
     display: flex;
     flex-direction: row;
     flex-grow: 1;

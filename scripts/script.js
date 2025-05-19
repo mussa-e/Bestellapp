@@ -2,6 +2,7 @@ function init(){
     renderMainDish();
     renderSubtotal();
     renderTotal();
+    emptyCheck();
 }
 
 function renderMainDish(){
@@ -12,22 +13,6 @@ function renderMainDish(){
         contentRef.innerHTML += getFoodTemplate(indexMain);
     }
 }
-
-function getFoodTemplate(indexMain){
-    return `
-            <div class="food-temp">
-            <div class="food-temp-head">
-            <div class="food-temp-name">${food[indexMain].name}</div>
-            <button onclick="addToBasket(${indexMain})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
-            </div>
-
-            <div class="food-temp-desc">${food[indexMain].description}</div>
-            <div class="food-temp-price">${food[indexMain].price.toFixed(2).replace("." ,",")}€</div>
-            </div>
-    
-    `
-}
-
 
 
 function addToBasket(indexMain) {
@@ -49,44 +34,24 @@ function addToBasket(indexMain) {
     renderBasket();
     renderSubtotal();
     renderTotal();
+    emptyCheck();
 }
 
 
 function renderBasket(){
     let basketContentRef = document.getElementById("inner-basket");
+    
     basketContentRef.innerHTML = "";
 
+    
     for (let indexBasket = 0; indexBasket < basket.length; indexBasket++) {
-        basketContentRef.innerHTML += getBasketTemplate(indexBasket);
+            basketContentRef.innerHTML += getBasketTemplate(indexBasket);
     }
-}
+    
 
-
-function getBasketTemplate(indexBasket){
-
-    let totalPrice = (basket[indexBasket].price * basket[indexBasket].amount).toFixed(2).replace(".", ",");
-
-    return `
-            
-            <div class="inner-basket-temp-wrapper">
-                <div class="inner-basket-name">${basket[indexBasket].name}</div>
-
-                    <div class="inner-basket-temp">
-
-                        <i onclick="subtractAmount(${indexBasket})"  class="fa-solid fa-minus"></i>
-
-                        <p>${basket[indexBasket].amount} x</p>
-
-                        <i onclick="addAmount(${indexBasket})" class="fa-solid fa-plus"></i>
-
-                        <p id="basket-total-${indexBasket}">${totalPrice}€</p>
-
-                        <i onclick="deleteItem(${indexBasket})" class="fa-solid fa-trash-can"></i>
-
-                    </div>
-
-            </div>
-    `
+    renderSubtotal();
+    renderTotal();
+    emptyCheck();
 }
 
 
@@ -95,6 +60,7 @@ function addAmount(indexBasket) {
     renderBasket();
     renderSubtotal();
     renderTotal();
+    emptyCheck();
 }
 
 
@@ -107,6 +73,7 @@ function subtractAmount(indexBasket) {
     renderBasket();
     renderSubtotal();
     renderTotal();
+    emptyCheck();
 }
 
 
@@ -115,8 +82,8 @@ function deleteItem(indexBasket) {
     renderBasket();
     renderSubtotal();
     renderTotal();
+    emptyCheck();
 }
-
 
 
 function renderSubtotal() { 
@@ -146,3 +113,33 @@ function renderTotal() {
 
     totalRef.innerHTML = `${total.toFixed(2).replace(".", ",")}€`;
 }
+
+
+function emptyCheck(){
+    let emptyInfoRef = document.getElementById("empty-info");
+
+    if (basket.length === 0) {
+        emptyInfoRef.classList.remove("d-none");
+        emptyInfoRef.classList.add("inner-basket-empty");
+
+    } else {
+        emptyInfoRef.classList.add("d-none");
+        emptyInfoRef.classList.remove("inner-basket-empty");
+    }
+}
+
+
+
+
+// noch to do
+
+// lieferkosten wegnehmen 
+
+// beilagen
+
+// responsivness, warenkorb
+
+// footer
+
+
+

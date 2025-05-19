@@ -32,7 +32,13 @@
 .inner-basket-temp i {
     color: chocolate;
     cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
 }
+.inner-basket-temp i:hover {
+  border: 1px solid chocolate;
+}
+
 .inner-basket-temp-wrapper{
     margin-bottom: 16px;
     margin-top: 16px;
@@ -40,10 +46,25 @@
 .inner-basket-name {
     font-weight: bold;
 }
+.inner-basket-empty {
+    color: grey;
+    padding: 24px;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.inner-basket-empty i {
+    font-size: 24px;
+}
+.inner-basket-empty p {
+    text-align: center;
+}
 
 .basket-bottom {
     padding: 0 16px 0 16px;
-    border-top: 0.5px solid #e0dada;
+    border-top: 1px solid #e0dada;
 }
 .subtotal {
     display: flex;
