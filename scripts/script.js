@@ -129,11 +129,21 @@ function emptyCheck(){
 }
 
 
+function cancelDelivery(){
+    let checkbox = document.getElementById("takeaway-checkbox");
+    let delivery = document.getElementById("delivery");
+
+    if (checkbox.checked) {
+        delivery.textContent = "0,00€";
+    } else {
+        delivery.textContent = "4,00€";
+    }
+
+    renderTotal();
+}
 
 
 // noch to do
-
-// lieferkosten wegnehmen 
 
 // beilagen
 

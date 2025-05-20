@@ -66,6 +66,12 @@
     padding: 0 16px 0 16px;
     border-top: 1px solid #e0dada;
 }
+.basket-bottom input {
+    margin-top: 48px;
+    cursor: pointer;
+    accent-color: chocolate;
+}
+
 .subtotal {
     display: flex;
     justify-content: space-between;
