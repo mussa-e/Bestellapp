@@ -16,7 +16,10 @@
 
     <script src="scripts/db.js"></script>
     <script src="scripts/script.js"></script>
-    <script src="scripts/template.js"></script>
+    <script src="scripts/basket.js"></script>
+    <script src="scripts/sides.js"></script>
+    <script src="scripts/drinks.js"></script>
+    <script src="scripts/maindish.js"></script>
 
 </head>
 
@@ -48,18 +51,32 @@
 
     <div class="navbar">
         <img src="assets/img/arrow.png" alt="">
-        <p onclick="renderMainDish()">Hauptgerichte</p>
-        <p onclick="renderSides()">Beilagen</p>
-        <p onclick="renderDrinks()">Drinks</p>
+        <a href="#main" onclick="renderMainDish()">Hauptgerichte</a>
+        <a href="#sides">Beilagen</a>
+        <a href="#drinks">Drinks</a>
     </div>
 
     <div class="mid-pic-sec">
-        <img src="assets/img/veg.jpg" alt="">
+        <img src="assets/img/veg.jpg">
     </div>
     
+
+    <h3>Hauptgerichte</h3>
     <main class="main" id="main">
         <!--  -->
     </main>
+
+    <h3>Beilagen</h3>
+    <section class="sides" id="sides">
+        <!--  -->
+    </section>
+
+    <h3>Getränke</h3>
+    <section class="drinks" id="drinks">
+        <!--  -->
+    </section>
+
+
 
     <div class="bottom-pic-sec">
         <a><img src="assets/img/chicken.jpg"></a>

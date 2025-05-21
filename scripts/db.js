@@ -25,6 +25,60 @@ let food = [
 ];
 
 
+let sides = [
+    {
+        "name" : "Gegrilltes Gemüse",
+        "description" : "Gegrilltes Gemüse",
+        "price" : 7.99
+    },
+
+    {
+        "name" : "Rosmarin-Focaccia",
+        "description" : "Frisches Fladenbrot mit Olivenöl und Rosmarin.",
+        "price" : 5.99
+    },
+
+    {
+        "name" : "Kichererbsensalat",
+        "description" : "Kichererbsen mit Tomaten, Minze und Zitrone.",
+        "price" : 7.99
+    },
+
+    {
+        "name" : "Ofenkartoffeln mit Aioli",
+        "description" : "Knusprige Kartoffeln mit Knoblauchcreme.",
+        "price" : 5.99
+    }
+];
+
+
+let drinks = [
+    {
+        "name" : "Coca Cola",
+        "description" : "0,3 Liter",
+        "price" : 2.99
+    },
+
+    {
+        "name" : "Fanta",
+        "description" : "0,3 Liter",
+        "price" : 2.99
+    },
+
+    {
+        "name" : "Sprite",
+        "description" : "0,3 Liter",
+        "price" : 2.99
+    },
+
+    {
+        "name" : "Fassbrause",
+        "description" : "0,3 Liter",
+        "price" : 2.99
+    }
+];
+
+
 let basket = [
     
-]
+];
