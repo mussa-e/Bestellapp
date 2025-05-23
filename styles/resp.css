@@ -1,0 +1,27 @@
+@media (max-width:700px) {
+    .content{
+        width: 100%;
+    }
+    .basket-wrapper {
+        display: none;
+    }
+    .basket-resp-wrapper {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        bottom: 0;
+        position: sticky;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar img { 
+        display: none;
+    }
+    .navbar {
+        padding: 20px 40px;
+        align-items: flex-start;
+        height: auto;
+        flex-direction: column;
+    }
+}

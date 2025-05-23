@@ -87,3 +87,17 @@
 .total p {
     font-weight: bold;
 }
+
+
+.basket-resp-wrapper {
+    display: none;
+}
+.basket-resp {
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    font-size: 24px;
+    color: white;
+    background-color: #215cef;
+    padding: 15px 40px;
+}
