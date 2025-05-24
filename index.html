@@ -21,12 +21,13 @@
     <script src="scripts/sides.js"></script>
     <script src="scripts/drinks.js"></script>
     <script src="scripts/maindish.js"></script>
+    <script src="scripts/respbasket.js"></script>
 
 </head>
 
 <body onload="init()">
 
-    <header>
+    <header id="header">
         <a href="index.html"><img href="index.html" src="assets/Logo/Logo.png" alt="Logo"></a>
 
         <div class="menu">
@@ -36,19 +37,25 @@
         </div>
     </header>
 
+    
 
 
 <div class="content-wrapper">
+
 
     <div class="content">
     <div class="head-pic-sec">
         <img src="assets/img/menu.jpg">
     </div>
 
+    
+
+
     <div class="imbiss-name-sec">
         <p class="imbiss-name">Plated!</p>
         <p class="rate">Bewertung (4,5 von 5 Sternen)</p>
     </div>
+
 
     <div class="navbar">
         <img src="assets/img/arrow.png" alt="">
@@ -56,6 +63,7 @@
         <a href="#sides">Beilagen</a>
         <a href="#drinks">Drinks</a>
     </div>
+
 
     <div class="mid-pic-sec">
         <img src="assets/img/veg.jpg">
@@ -67,10 +75,12 @@
         <!--  -->
     </main>
 
+
     <h3>Beilagen</h3>
     <section class="sides" id="sides">
         <!--  -->
     </section>
+
 
     <h3>Getränke</h3>
     <section class="drinks" id="drinks">
@@ -78,27 +88,25 @@
     </section>
 
 
-
     <div class="bottom-pic-sec">
-        <a><img src="assets/img/chicken.jpg"></a>
+        <a href="#header"><img src="assets/img/chicken.jpg"></a>
     </div>
 
-    <div onclick="showBasketResp()" class="basket-resp-wrapper">
-        <div class="basket-resp">
+
+    <div onclick="renderRespBasket()" class="basket-resp" id="basket-resp">
         Warenkorb
-        </div>
     </div>
 
 
-    </div>
+    <div id="overlay" class="overlay d-none"></div>
+    
 
-
-
-
-
-    <div class="basket-wrapper">
+</div>
         
-        <div class="basket">
+
+    <div class="basket-wrapper" id="basket-wrapper">
+        
+        <div id="basket" class="basket">
             <div class="basket-head">
                 <h1>Warenkorb</h1>
             </div>
@@ -116,13 +124,17 @@
 
 
             <div class="basket-bottom">
-            <div class="subtotal"><p>Zwischensumme</p> <p id="subtotal"></p> </div>
-            <div class="delivery"><p>Lieferkosten</p> <p id="delivery">4,00€</p> </div>
-            <div class="total"><p>Gesamt</p> <p id="total"></p> </div>
+                <div class="subtotal"><p>Zwischensumme</p> <p id="subtotal"></p> </div>
+                <div class="delivery"><p>Lieferkosten</p> <p id="delivery">4,00€</p> </div>
+                <div class="total"><p>Gesamt</p> <p id="total"></p> </div>
             <label>
                 <input onclick="cancelDelivery()" type="checkbox" name="takeaway" id="takeaway-checkbox">
                     Takeaway
             </label>
+
+            <div onclick="renderRespBasket()" class="inner-warenkorb" id="inner-warenkorb">
+                Warenkorb verlassen
+            </div>
 
             
             </div>
@@ -132,15 +144,10 @@
     </div>
 
 
-
-
-
     <footer>
 
     </footer>
     
-
-
 
 </body>
 </html>

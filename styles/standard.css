@@ -20,4 +20,19 @@ h3 {
     padding: 0 56px 0 56px;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
+.no-sticky {
+    position: static !important;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.no-sticky-basket{
+    position: relative !important;
+}
+
 

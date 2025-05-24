@@ -7,6 +7,7 @@ function renderMainDish(){
     }
 }
 
+
 function getFoodTemplate(indexMain){
     return `
             <div class="food-temp">

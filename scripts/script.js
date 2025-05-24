@@ -96,11 +96,4 @@ function cancelDelivery(){
 }
 
 
-// noch to do
-
-// responsivness, warenkorb
-
-// footer
-
-
 

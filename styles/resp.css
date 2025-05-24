@@ -5,12 +5,20 @@
     .basket-wrapper {
         display: none;
     }
-    .basket-resp-wrapper {
+    .basket-resp {
+        text-align: center;
         display: flex;
         flex-direction: column;
         cursor: pointer;
         bottom: 0;
         position: sticky;
+    }
+    .inner-warenkorb {
+        display: flex !important;
+        justify-content: center;
+    }
+    .basket-head {
+        box-shadow: none;
     }
 }
 

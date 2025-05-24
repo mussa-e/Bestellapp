@@ -14,7 +14,6 @@ header {
     align-items: center;
     padding: 0 40px 0 40px;
     justify-content: space-between;
-
 }
 
 header img {
@@ -22,13 +21,13 @@ header img {
     width: 104px;
 }
 
-
 .menu {
     display: flex;
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
 }
+
 .line {
     background-color: white;
     height: 3px;
@@ -38,7 +37,6 @@ header img {
 .head-pic-sec {
     height: 200px;
 }
-
 .head-pic-sec img {
     width: 100%;
     height: 200px;
@@ -48,7 +46,6 @@ header img {
 .imbiss-name-sec {
     padding: 0 40px 0 40px;
 }
-
 .imbiss-name {
     font-weight: bold;
     font-size: 24px;
@@ -114,7 +111,6 @@ main, .sides, .drinks {
 footer {
     height: 80px;
     background-color: chocolate;
-    
 }
 
 .food-temp-headline {
@@ -154,3 +150,5 @@ footer {
     flex-direction: column;
     display: flex;
 }
+
+
