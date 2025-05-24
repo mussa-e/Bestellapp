@@ -2,6 +2,9 @@
     .content{
         width: 100%;
     }
+    .basket{
+        height: 100%;
+    }
     .basket-wrapper {
         display: none;
     }
@@ -31,5 +34,14 @@
         align-items: flex-start;
         height: auto;
         flex-direction: column;
+    }
+    footer {
+        flex-direction: column;
+        padding: 16px;
+        gap: 8px;
+    }
+    .footer-icons img {
+        height: 24px;
+        width: 24px;
     }
 }

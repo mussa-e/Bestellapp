@@ -15,7 +15,6 @@ function renderBasket(){
     renderSubtotal();
     renderTotal();
     emptyCheck();
-    toggleSticky();
 }
 
 

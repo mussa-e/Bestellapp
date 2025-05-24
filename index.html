@@ -48,6 +48,8 @@
         <img src="assets/img/menu.jpg">
     </div>
 
+    <div class="logo"><img src="assets/Logo/pizza.png" alt=""></div>
+
     
 
 
@@ -71,18 +73,21 @@
     
 
     <h3>Hauptgerichte</h3>
+    <div class="slider"><img src="assets/img/chicken.jpg" alt=""></div>
     <main class="main" id="main">
         <!--  -->
     </main>
 
 
     <h3>Beilagen</h3>
+    <div class="slider"><img src="assets/img/veg.jpg" alt=""></div>
     <section class="sides" id="sides">
         <!--  -->
     </section>
 
 
     <h3>Getränke</h3>
+    <div class="slider"><img src="assets/img/veg.jpg" alt=""></div>
     <section class="drinks" id="drinks">
         <!--  -->
     </section>
@@ -127,10 +132,17 @@
                 <div class="subtotal"><p>Zwischensumme</p> <p id="subtotal"></p> </div>
                 <div class="delivery"><p>Lieferkosten</p> <p id="delivery">4,00€</p> </div>
                 <div class="total"><p>Gesamt</p> <p id="total"></p> </div>
+
+                <button class="button-order" onclick="order()">Bestellen</button>
+
+                <div class="info" id="info">Deine Bestellung ist raus!</div>
+
             <label>
                 <input onclick="cancelDelivery()" type="checkbox" name="takeaway" id="takeaway-checkbox">
                     Takeaway
             </label>
+
+            
 
             <div onclick="renderRespBasket()" class="inner-warenkorb" id="inner-warenkorb">
                 Warenkorb verlassen
@@ -145,7 +157,13 @@
 
 
     <footer>
+        <a href="#header"><img src="assets/Logo/Logo.png" alt="Logo"></a>
 
+        <div class="footer-icons">
+                    <a href="https://www.twitter.com/" target="_blank" title="X"> <img src="assets/img/twitter_white.png" alt="twitter-logo"></a>
+                    <a href="https://www.instagram.com/" target="_blank" title="Instagramm"> <img src="assets/img/instagram_white.png" alt="instagram-logo"></a>
+                    <a href="https://www.facebook.com/" target="_blank" title="Facebook"> <img src="assets/img/facebook_white.png" alt="facebook-logo"></a>
+                </div>
     </footer>
     
 

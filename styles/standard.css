@@ -18,6 +18,7 @@
 
 h3 {
     padding: 0 56px 0 56px;
+    margin-bottom: 0;
 }
 
 .no-scroll {
@@ -33,6 +34,16 @@ h3 {
 
 .no-sticky-basket{
     position: relative !important;
+}
+
+.button-order{
+    background-color: chocolate;
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 

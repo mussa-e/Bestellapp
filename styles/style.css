@@ -3,7 +3,7 @@ html, body {
     font-family: "Raleway", sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    /* height: 100%; */
     scroll-behavior: smooth;
 }
 
@@ -109,8 +109,24 @@ main, .sides, .drinks {
 }
 
 footer {
-    height: 80px;
     background-color: chocolate;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px 0 40px;
+    justify-content: space-between;
+}
+footer img {
+    height: 48px;
+    width: 104px;
+}
+.footer-icons {
+    display: flex;
+    gap: 24px;
+}
+.footer-icons img {
+    height: 30px;
+    width: 30px;
 }
 
 .food-temp-headline {
@@ -149,6 +165,27 @@ footer {
     width: calc(100% - 280px);
     flex-direction: column;
     display: flex;
+}
+
+
+.logo img {
+    position: absolute;
+    top: 207px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 85px;
+    width: 85px;
+    z-index: 1000;
+    border-radius: 50px;
+}
+
+.slider {
+    padding: 16px 40px 16px 40px;
+}
+.slider img {
+    height: 80px;
+    width: 100%;
+    object-fit: cover;
 }
 
 
