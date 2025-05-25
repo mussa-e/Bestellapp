@@ -9,18 +9,6 @@ function renderRespBasket(){
 }
 
 
-// function toggleSticky(){
-//     let Ref = document.getElementById("basket");
-
-//     if (basket.length > 3) {
-//         Ref.classList.add("no-sticky-basket");
-//     }
-//     else{
-//         Ref.classList.remove("no-sticky-basket");
-//     }
-// }
-
-
 function order(){
     basket.splice(0, basket.length);
 
@@ -28,5 +16,5 @@ function order(){
 
     let info = document.getElementById("info");
     info.style.display = 'block';
-    setTimeout(() => info.style.display = 'none', 2000);
+    setTimeout(() => info.style.display = 'none', 2500);
 }
