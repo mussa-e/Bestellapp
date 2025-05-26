@@ -32,7 +32,7 @@ function getDrinksTemplate(indexDrinks){
     <div class="food-temp">
                 <div class="food-temp-head">
                     <div class="food-temp-name">${drinks[indexDrinks].name}</div>
-                    <button onclick="addDrinksToBasket(${indexDrinks})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="addToBasket(${indexDrinks}, drinks)" class="button-plus"><i class="fa-solid fa-plus"></i></button>
                 </div>
 
                 <div class="food-temp-desc">${drinks[indexDrinks].description}</div>
@@ -47,7 +47,7 @@ function getFoodTemplate(indexMain){
             <div class="food-temp">
                 <div class="food-temp-head">
                     <div class="food-temp-name">${food[indexMain].name}</div>
-                    <button onclick="addToBasket(${indexMain})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="addToBasket(${indexMain}, food)" class="button-plus"><i class="fa-solid fa-plus"></i></button>
                 </div>
 
                 <div class="food-temp-desc">${food[indexMain].description}</div>
@@ -63,7 +63,7 @@ function getSidesTemplate(indexSides){
     <div class="food-temp">
                 <div class="food-temp-head">
                     <div class="food-temp-name">${sides[indexSides].name}</div>
-                    <button onclick="addSidesToBasket(${indexSides})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
+                    <button onclick="addToBasket(${indexSides}, sides)" class="button-plus"><i class="fa-solid fa-plus"></i></button>
                 </div>
 
                 <div class="food-temp-desc">${sides[indexSides].description}</div>

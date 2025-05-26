@@ -34,6 +34,9 @@
     .menu {
         display: none;
     }
+    .no-sticky {
+        padding: 0 40px;
+    }
 }
 
 @media (max-width: 400px) {

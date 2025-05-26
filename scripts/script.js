@@ -1,13 +1,13 @@
 function init(){
-    renderMainDish();
+    renderMain();
     renderSubtotal();
     renderTotal();
     emptyCheck();
-    renderSides();
-    renderDrinks();
 }
 
+
 function renderSum() {
+    renderMain();
     renderBasket();
     renderSubtotal();
     renderTotal();
