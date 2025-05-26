@@ -9,23 +9,6 @@ function renderSides(){
 }
 
 
-function getSidesTemplate(indexSides){
-    return  `
-    
-    <div class="food-temp">
-                <div class="food-temp-head">
-                    <div class="food-temp-name">${sides[indexSides].name}</div>
-                    <button onclick="addSidesToBasket(${indexSides})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
-                </div>
-
-                <div class="food-temp-desc">${sides[indexSides].description}</div>
-                <div class="food-temp-price">${sides[indexSides].price.toFixed(2).replace("." ,",")}€</div>
-            </div>
-    
-    `
-}
-
-
 function addSidesToBasket(indexSides) {
     let addName = sides[indexSides].name;
     let addPrice = sides[indexSides].price;
@@ -42,8 +25,5 @@ function addSidesToBasket(indexSides) {
         });
     }
 
-    renderBasket();
-    renderSubtotal();
-    renderTotal();
-    emptyCheck();
+    renderSum();
 }

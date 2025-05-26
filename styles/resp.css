@@ -16,9 +16,10 @@
         display: none;
     }
     .basket-resp {
+        gap: 16px;
         text-align: center;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         cursor: pointer;
         bottom: 0;
         position: sticky;
@@ -29,6 +30,9 @@
     }
     .basket-head {
         box-shadow: none;
+    }
+    .menu {
+        display: none;
     }
 }
 

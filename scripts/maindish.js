@@ -8,22 +8,6 @@ function renderMainDish(){
 }
 
 
-function getFoodTemplate(indexMain){
-    return `
-            <div class="food-temp">
-                <div class="food-temp-head">
-                    <div class="food-temp-name">${food[indexMain].name}</div>
-                    <button onclick="addToBasket(${indexMain})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
-                </div>
-
-                <div class="food-temp-desc">${food[indexMain].description}</div>
-                <div class="food-temp-price">${food[indexMain].price.toFixed(2).replace("." ,",")}€</div>
-            </div>
-    
-    `
-}
-
-
 function addToBasket(indexMain) {
     let addName = food[indexMain].name;
     let addPrice = food[indexMain].price;
@@ -40,8 +24,5 @@ function addToBasket(indexMain) {
         });
     }
 
-    renderBasket();
-    renderSubtotal();
-    renderTotal();
-    emptyCheck();
+    renderSum();
 }

@@ -8,12 +8,19 @@
     position: sticky;
     top: 0;
     padding: 16x;
+    max-height: 100vh;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
 }
 .basket-head {
     box-shadow: 0px 6px 8px rgba(149, 157, 165, 0.2);
     align-items: center;
     justify-content: center;
     display: flex;
+    z-index: 1;
+    flex-direction: column;
+    flex-shrink: 0;
 }
 .basket-head h1 {
     font-weight: 610;
@@ -21,6 +28,8 @@
 }
 .inner-basket {
     padding: 16px;
+    flex: 1;
+    overflow-y: auto;
 }
 .inner-basket-temp {
     display: flex;
@@ -66,6 +75,8 @@
     border-top: 1px solid #e0dada;
     display: flex;
     flex-direction: column;
+    z-index: 1;
+    flex-shrink: 0;
 }
 .basket-bottom input {
     margin-top: 48px;
@@ -93,10 +104,10 @@
     display: none;
     font-weight: bold;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     background-color: #215cef;
-    padding: 15px 40px;
+    padding: 0 40px;
 }
 
 .basket-wrapper-new {
@@ -138,6 +149,26 @@
     font-weight: bold;
     background-color: #5faf12;
     color: white;
+}
+
+
+
+.inner-basket::-webkit-scrollbar {
+    width: 4px;          
+}
+
+.inner-basket::-webkit-scrollbar-track {
+    background: #f1f1f1;   
+    border-radius: 4px;
+}
+
+.inner-basket::-webkit-scrollbar-thumb {
+    background: #888;     
+    border-radius: 4px;
+}
+
+.inner-basket::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 

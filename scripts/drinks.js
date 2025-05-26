@@ -9,23 +9,6 @@ function renderDrinks(){
 }
 
 
-function getDrinksTemplate(indexDrinks){
-    return  `
-    
-    <div class="food-temp">
-                <div class="food-temp-head">
-                    <div class="food-temp-name">${drinks[indexDrinks].name}</div>
-                    <button onclick="addDrinksToBasket(${indexDrinks})" class="button-plus"><i class="fa-solid fa-plus"></i></button>
-                </div>
-
-                <div class="food-temp-desc">${drinks[indexDrinks].description}</div>
-                <div class="food-temp-price">${drinks[indexDrinks].price.toFixed(2).replace("." ,",")}€</div>
-            </div>
-    
-    `
-}
-
-
 function addDrinksToBasket(indexDrinks) {
     let addName = drinks[indexDrinks].name;
     let addPrice = drinks[indexDrinks].price;
@@ -42,8 +25,5 @@ function addDrinksToBasket(indexDrinks) {
         });
     }
 
-    renderBasket();
-    renderSubtotal();
-    renderTotal();
-    emptyCheck();
+    renderSum();
 }

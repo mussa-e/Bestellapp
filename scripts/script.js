@@ -7,13 +7,17 @@ function init(){
     renderDrinks();
 }
 
-
-function addAmount(indexBasket) {
-    basket[indexBasket].amount++;
+function renderSum() {
     renderBasket();
     renderSubtotal();
     renderTotal();
     emptyCheck();
+}
+
+
+function addAmount(indexBasket) {
+    basket[indexBasket].amount++;
+    renderSum();
 }
 
 
@@ -23,19 +27,13 @@ function subtractAmount(indexBasket) {
     } else {
         basket.splice(indexBasket, 1);
     }
-    renderBasket();
-    renderSubtotal();
-    renderTotal();
-    emptyCheck();
+    renderSum();
 }
 
 
 function deleteItem(indexBasket) {
     basket.splice(indexBasket, 1);
-    renderBasket();
-    renderSubtotal();
-    renderTotal();
-    emptyCheck();
+    renderSum();
 }
 
 
@@ -55,16 +53,18 @@ function renderTotal() {
     let totalRef = document.getElementById("total");
     let subtotalRef = document.getElementById("subtotal");
     let delRef = document.getElementById("delivery");
+    let counterRef = document.getElementById("counter");
 
     let subtotalText = subtotalRef.innerText.replace("€", "").replace(",", ".");
     let deliveryText = delRef.innerText.replace("€", "").replace(",", ".");
 
     let subtotal = parseFloat(subtotalText); 
-    let delivery = parseFloat(deliveryText); //parseFloat wandelt string in number um (hier "4.00" zu 4.00)
+    let delivery = parseFloat(deliveryText);
 
     let total = subtotal + delivery;
 
     totalRef.innerHTML = `${total.toFixed(2).replace(".", ",")}€`;
+    counterRef.innerHTML = ` ${total.toFixed(2).replace(".", ",")}€`;
 }
 
 
